@@ -28,16 +28,16 @@ public class Util {
         return total;
     }
 
-    public static String min_characters(List<String> abc){
-        String ans = abc.get(0);
-        int total = ans.length();
+    public static String min_characters(List<String> abc){ // abc=["ACEA", "ACE"]
+        String ans = abc.get(0); // "ACEA"
+        int total = ans.length(); // 4
         for (int i = 1; i < abc.size(); i++){
-            if (abc.get(i).length() < total) {
-                total = abc.get(i).length();
-                ans = abc.get(i);
+            if (abc.get(i).length() < total) { //abc.get(1).length()=3
+                total = abc.get(i).length(); // total=3
+                ans = abc.get(i); // ans="ACE"
             }
         }
-        return ans;
+        return ans; // "ACE"
     }
 
     public static List<Map.Entry<String, Integer>> sortDecreasing(Map<String, Integer> map) {
